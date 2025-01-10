@@ -1,0 +1,673 @@
+#logo {
+    width: 55%;
+}
+#attachments-img {
+    width: 10%;
+}
+
+#deleteFile-img {
+    width: 60%;
+}
+
+#newattachments-img {
+    width: 10%;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #021622;
+
+}
+
+.logo,
+.logo img {
+  width: 100px;
+  height: 80px;
+  cursor: none;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  margin: 0px 15px;
+  transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+  color: #37FF8B;
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #37FF8B;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+::selection {
+  color: #021622;
+  background: #37FF8B;
+}
+
+.wrapper {
+  margin: 50px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fill, 265px);
+
+}
+
+.wrapper li {
+  box-shadow: 11px 13px 12px rgba(0, 0, 0, 0.151);
+  height: 250px;
+  list-style: none;
+  border-radius: 5px;
+  padding: 15px 20px 20px;
+  background: #fff;
+}
+
+.add-box,
+.icon,
+.bottom-content,
+.popup,
+header,
+.settings .menu li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-box {
+  cursor: none;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.1s;
+}
+
+.add-box:hover {
+  margin-top: -10px;
+}
+
+.add-box .icon {
+  height: 78px;
+  width: 78px;
+  color: #88abff;
+  font-size: 40px;
+  border-radius: 50%;
+  justify-content: center;
+  border: 2px dashed #88abff;
+  transition: 01s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.add-box .icon:hover {
+  animation: animate 0.5s;
+  border: 2px solid #88abff;
+}
+
+.add-box p {
+  color: #88abff;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.note {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.note .details {
+  max-height: 165px;
+  overflow-y: auto;
+}
+
+.note .details::-webkit-scrollbar,
+.popup textarea::-webkit-scrollbar {
+  width: 0;
+}
+
+.note .details:hover::-webkit-scrollbar,
+.popup textarea:hover::-webkit-scrollbar {
+  width: 5px;
+}
+
+.note .details:hover::-webkit-scrollbar-track,
+.popup textarea:hover::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.note .details:hover::-webkit-scrollbar-thumb,
+.popup textarea:hover::-webkit-scrollbar-thumb {
+  background: #e6e6e6;
+  border-radius: 25px;
+}
+
+.note p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.note span {
+  display: block;
+  color: #575757;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.note .bottom-content {
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.bottom-content span {
+  color: #6d6d6d;
+  font-size: 14px;
+}
+
+.bottom-content .settings {
+  position: relative;
+}
+
+.bottom-content .settings i {
+  color: #6d6d6d;
+  cursor: none;
+  font-size: 15px;
+}
+
+.settings .menu {
+  z-index: 1;
+  bottom: 0;
+  right: -5px;
+  padding: 5px 0;
+  background: #fff;
+  position: absolute;
+  border-radius: 4px;
+  transform: scale(0);
+  transform-origin: bottom right;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.settings.show .menu {
+  transform: scale(1);
+}
+
+.settings .menu li {
+  height: 25px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  padding: 17px 15px;
+  cursor: none;
+  box-shadow: none;
+  border-radius: 0;
+  justify-content: flex-start;
+}
+
+.menu li:last-child {
+  margin-bottom: 0;
+}
+
+.menu li:hover {
+  background: #f5f5f5;
+}
+
+.menu li i {
+  padding-right: 8px;
+}
+
+.popup-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.popup-box .popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  width: 100%;
+  max-width: 400px;
+  justify-content: center;
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+.popup-box,
+.popup {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.popup-box.show,
+.popup-box.show .popup {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-box.show .popup {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup .content {
+  border-radius: 5px;
+  background: #fff;
+  width: calc(100% - 15px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.content header {
+  padding: 15px 25px;
+  border-bottom: 1px solid #ccc;
+}
+
+.content header p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.content header i {
+  color: #8b8989;
+  cursor: none;
+  font-size: 23px;
+}
+
+.content form {
+  margin: 15px 25px 35px;
+}
+
+.content form .row {
+  margin-bottom: 20px;
+}
+
+form .row label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+form :where(input, textarea) {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding: 0 15px;
+  border-radius: 4px;
+  border: 1px solid #999;
+}
+
+form :where(input, textarea):focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.11);
+}
+
+form .row textarea {
+  height: 150px;
+  resize: none;
+  padding: 8px 15px;
+}
+
+form button {
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: none;
+  font-size: 17px;
+  border-radius: 4px;
+  background: #37FF8B;
+}
+
+@media (max-width: 660px) {
+  .wrapper {
+    margin: 15px;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, 100%);
+  }
+
+  .popup-box .popup {
+    max-width: calc(100% - 15px);
+  }
+
+  .bottom-content .settings i {
+    font-size: 17px;
+  }
+}
+
+/* cusor animation for notes app  */
+
+.cursor {
+  z-index: 999;
+  position: fixed;
+  background: #e82650;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 20px #e82650,
+    0 0 60px #e82650,
+    0 0 100px #e82650;
+  animation: colors 5s infinite;
+  transform: translate(-50%, -50%);
+  display: none;
+  /*   z-index: 99; */
+}
+
+@keyframes colors {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.cursor:before {
+  content: '';
+  position: absolute;
+  background: #e82650;
+  width: 50px;
+  height: 50px;
+  opacity: 0.2;
+  transform: translate(-30%, -30%);
+  border-radius: 50%;
+}
+
+
+
+
+@media (max-width: 800px) { 
+    #logo {
+        max-width: 400px;
+    }
+ }
+
+.search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+.search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+  }
+.bg-light {
+    background-color: white;
+}
+
+#brand-title {
+    color: black;
+}
+
+.signin-title {
+    margin: 15px;
+}
+
+.input-field>label:first-of-type{
+    display:block;
+    margin-bottom:.5rem;
+    font-weight:400
+}
+.input-field>label:first-of-type.h5{
+    font-weight:600
+}
+
+.input-field{
+    position:relative;
+    margin-bottom:1.5rem;
+    margin-top:1.5rem;  
+    border-radius:0px;
+}
+
+.signin{
+    width: 100%;
+    border-radius:0px;
+    margin-top:1rem; 
+    padding: 0.6rem; 
+}
+
+.btn-custom{
+    background-color:#009933;
+    border-color: #00802b;
+    color: white;
+}
+
+.btn-custom:active,.btn-custom:target,
+.btn.btn-custom:active,.btn.btn-custom:focus,.btn.btn-custom:hover 
+{
+    -webkit-box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+
+    background-color: white;
+    color: #009933;
+    border-color: #009933;
+}
+
+
+.btn.btn-dark:active,.btn.btn-dark:focus,.btn.btn-dark:hover {
+    -webkit-box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+    background-color: white;
+    color: black;
+}
+
+.upload-title {
+    display: inline;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-bottom: 20px;
+    
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+p {
+    display: inline;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#s3-img {
+    display: inline;
+    margin-left: 15px;
+    width: 8%;
+}
+
+@media screen and (max-width: 1024px) { 
+    #s3-img {
+        width: 10%;
+    }
+ }
+
+
+@media screen and (max-width:  992px) {
+    .upload-form {
+        margin-top: 15px;
+    }
+}
+
+.chat-tab {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 60px; /* Adjust if necessary to match your design */
+    height: 60px; /* Adjust if necessary to match your design */
+    border-radius: 50%; /* This gives the circular shape */
+    overflow: hidden; /* Ensures no overflow outside the circular shape */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for better visibility */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #chatIcon {
+    width: 100%; /* Makes the image fill the container */
+    height: auto; /* Maintains the aspect ratio of the image */
+  }
+
+  .chat-container {
+    position: fixed;
+    bottom: 70px; /* Position above the chat-tab */
+    right: 10px;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: none; /* Initially hide the chat */
+    flex-direction: column;
+  }
+
+  .messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+  }
+
+  .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+  }
+  
+  .message img {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .message.user {
+    background-color: #007bff; /* Light gray background for user messages */
+    color: white; /* White text for readability */
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 5px;
+    max-width: 80%;
+    align-self: flex-end; /* Align user messages to the right */
+  }
+
+  .message.bot {
+    background-color:#f1f1f1 ; /* Blue background for bot messages */
+    color: black; /* Black text for readability */
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 5px;
+    max-width: 80%;
+    align-self: flex-start; /* Align bot messages to the left */
+  }
+
+  .chat-input {
+    display: flex;
+  }
+
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    margin: 5px;
+  }
+
+  button {
+    padding: 10px;
+    border: none;
+    margin: 5px;
+  }
